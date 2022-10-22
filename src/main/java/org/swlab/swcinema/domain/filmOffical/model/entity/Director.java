@@ -1,4 +1,4 @@
-package org.swlab.swcinema.domain.fileOffical.model.entity;
+package org.swlab.swcinema.domain.filmOffical.model.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 import org.swlab.swcinema.domain.film.model.entity.Movie;
 
 @Entity
-public class Actor {
+public class Director {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,6 +25,6 @@ public class Actor {
 	@JoinColumn(name = "movie_id")
 	private Movie movie;
 
-	protected Actor() {
+	protected Director() {
 	}
 }

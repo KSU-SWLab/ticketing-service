@@ -1,4 +1,4 @@
-package org.swlab.swcinema.domain.fileOffical.model.entity;
+package org.swlab.swcinema.domain.filmOffical.model.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
