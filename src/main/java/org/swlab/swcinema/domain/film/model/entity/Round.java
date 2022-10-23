@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import org.swlab.swcinema.domain.cinema.model.entity.Hall;
+
 @Entity
 public class Round {
 	@Id
@@ -20,7 +22,11 @@ public class Round {
 	@JoinColumn(name = "movie_id")
 	private Movie movie;
 
-	private LocalDateTime startDate;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "hall_id")
+	private Hall hall;
+
+	private LocalDateTime startTime;
 
 	protected Round() {
 	}

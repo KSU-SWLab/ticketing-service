@@ -1,14 +1,9 @@
 package org.swlab.swcinema.domain.cinema.model.entity;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-
-import org.swlab.swcinema.domain.film.model.entity.Movie;
 
 @Entity
 public class Hall {
@@ -16,16 +11,34 @@ public class Hall {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "movie_id")
-	private Movie movie;
-
 	private int totalSeat;
 
 	private int floor;
 
-	private int rowNum;
+	private int hallNumber;
 
 	protected Hall() {
+	}
+
+	public Hall(int totalSeat, int floor, int hallNumber) {
+		this.totalSeat = totalSeat;
+		this.floor = floor;
+		this.hallNumber = hallNumber;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public int getTotalSeat() {
+		return totalSeat;
+	}
+
+	public int getFloor() {
+		return floor;
+	}
+
+	public int getHallNumber() {
+		return hallNumber;
 	}
 }
