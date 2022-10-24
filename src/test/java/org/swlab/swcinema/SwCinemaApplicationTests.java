@@ -1,10 +1,10 @@
-package org.swlab.ticketingservice;
+package org.swlab.swcinema;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TicketingServiceApplicationTests {
+class SwCinemaApplicationTests {
 
 	@Test
 	void contextLoads() {
